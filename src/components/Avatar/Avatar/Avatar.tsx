@@ -1,38 +1,6 @@
 import React from 'react';
-import './Avatar.scss';
-
-export interface AvatarProps {
-    /**
-     * Size of the avatar.
-     */
-    size?: 'xs' | 'sm' | 'md' | 'lg';
-
-    /**
-     * Additional class names for custom styling.
-     */
-    className?: string;
-
-    /**
-     * Additional styles for custom styling.
-     */
-    style?: React.CSSProperties;
-    /**
-     * Whether the avatar is circular.
-     */
-    type?: 'circular' | 'rounded' | 'square';
-    /**
-     * The source URL of the image for the avatar.
-     */
-    variant? : 'text' | 'icon' | 'image';
-    /**
-     * The content of the avatar, can be text, icon, or image.
-     */
-    content?: React.ReactNode;
-    /**
-     * The status dot.
-     */
-    badge?: boolean;
-}
+import './styles.scss';
+import { AvatarProps } from './types';
 
 export const Avatar: React.FC<AvatarProps> = ({
     size = 'md',

@@ -1,2 +1,2 @@
-export * from './Typo';
+export * from './Alert';
 export * from './types';
