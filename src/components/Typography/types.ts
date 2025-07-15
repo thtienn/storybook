@@ -14,11 +14,10 @@ export enum TypoVariant {
     BODY2 = 'body2',
     BODY1 = 'body1',
     CUSTOM = 'custom',
-    DESCRIPTION = 'description',
 }
 
 export interface TypoProps extends ClassComponentProps {
-    variant: TypoVariant;
+    variant?: TypoVariant;
     content: React.ReactNode;
     gutter: boolean;
 }

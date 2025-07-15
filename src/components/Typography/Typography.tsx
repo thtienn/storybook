@@ -3,7 +3,7 @@ import { TypoProps } from './types';
 import React from 'react';
 import { TypoVariant } from './types';
 
-export const Typo: React.FC<TypoProps> = ({
+export const Typography: React.FC<TypoProps> = ({
     variant = TypoVariant.CUSTOM,
     className = '',
     style = {},
@@ -17,11 +17,11 @@ export const Typo: React.FC<TypoProps> = ({
         variant === TypoVariant.H4 ? 'h4' :
         variant === TypoVariant.H5 ? 'h5' :
         variant === TypoVariant.H6 ? 'h6' :
-        'span';
-
+        'p';
+    
     return (
         <Tag
-            className={`typo typo--${variant}${gutter ? ' typo--gutter' : ''} ${className}`}
+            className={`typo typo--${variant} ${gutter ? ' typo--gutter' : 'typo--not-gutter'} ${className}`}
             style={style}
         >
             {content}

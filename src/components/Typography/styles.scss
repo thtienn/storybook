@@ -1,0 +1,76 @@
+@import "../../styles/font";
+@import "../../styles/colors";
+
+.typo {
+  color: $color-text-primary;
+  font-family: $font-family;
+
+  &--h1 {
+    font-size: $font-size-h1;
+    font-weight: $font-weight-light;
+  }
+
+  &--h2 {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-light;
+  }
+
+  &--h3 {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-regular;
+  }
+
+  &--h4 {
+    font-size: $font-size-h4;
+    font-weight: $font-weight-regular;
+  }
+
+  &--h5 {
+    font-size: $font-size-h5;
+    font-weight: $font-weight-regular;
+  }
+
+  &--h6 {
+    font-size: $font-size-h6;
+    font-weight: $font-weight-medium;
+  }
+
+  &--caption {
+    font-size: $font-size-caption;
+    font-weight: $font-weight-regular;
+  }
+
+  &--overline {
+    font-size: $font-size-overline;
+    font-weight: $font-weight-regular;
+    text-transform: uppercase;
+  }
+
+  &--subtitle2 {
+    font-size: $font-size-subtitle2;
+    font-weight: $font-weight-medium;
+  }
+
+  &--subtitle1 {
+    font-size: $font-size-subtitle1;
+    font-weight: $font-weight-regular;
+  }
+
+  &--body2 {
+    font-size: $font-size-body2;
+    font-weight: $font-weight-regular;
+  }
+
+  &--body1 {
+    font-size: $font-size-body1;
+    font-weight: $font-weight-regular;
+  }
+
+  &--gutter {
+    padding-bottom: 0.5rem;
+  }
+
+  &--not-gutter {
+    padding-bottom: 0;
+  }
+}

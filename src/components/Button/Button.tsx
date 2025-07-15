@@ -1,43 +1,26 @@
 import React from 'react';
-import './Button.sass';
-
-export interface ButtonProps {
-  /**
-   * Button contents
-   */
-  children: React.ReactNode;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
-  /**
-   * Button variant
-   */
-  variant?: 'primary' | 'secondary' | 'outline';
-  /**
-   * Button size
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Disabled state
-   */
-  disabled?: boolean;
-}
+import './Button.scss';
+import { ButtonProps } from './types';
 
 export const Button: React.FC<ButtonProps> = ({
   children,
   onClick,
-  variant = 'primary',
+  color = 'primary',
+  variant = 'contained',
   size = 'medium',
   disabled = false,
+  className = '',
+  style = {},
+  loading = false,
 }) => {
   return (
     <button
-      className={`stacktech-button stacktech-button--${variant} stacktech-button--${size}`}
+      className={`button button--${color} button--${variant} button--${size} ${loading ? `button--isLoading` : `button-isNotLoading`} ${className}`}
       onClick={onClick}
       disabled={disabled}
+      style={style}
     >
       {children}
     </button>
   );
-}; 
+}
