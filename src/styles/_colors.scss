@@ -40,7 +40,7 @@ $color-error-main: rgba(211, 47, 47, 1);
 $color-error-dark: rgba(198, 40, 40, 1);
 $color-error-light: rgba(239, 83, 80, 1);
 $color-error-contrastText: #ffffff;
-$color-error-hover: rgba(255, 255, 255, 1);
+$color-error-hover: rgba(211, 47, 47, $opacity-hover);
 $color-error-selected: rgba(211, 47, 47, $opacity-selected);
 $color-error-focus: rgba(211, 47, 47, $opacity-focus);
 $color-error-focusVisible: rgba(211, 47, 47, $opacity-focusVisible);
