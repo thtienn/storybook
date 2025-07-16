@@ -1,5 +1,17 @@
-import { ClassComponentProps } from '../../types/global-type';
-export interface ButtonProps  extends ClassComponentProps {
+import { ClassComponentProps, Size, State, Variant } from '../../types';
+
+export enum ButtonColors {
+    Primary = 'primary',
+    Secondary = 'secondary',
+    Error = 'error',
+    Warning = 'warning',
+    Info = 'info',
+    Success = 'success',
+    Inherit = 'inherit',
+    InheritWhite = 'inherit-white'
+}
+
+export interface ButtonProps extends ClassComponentProps {
     /**
      * Button contents
      */
@@ -11,19 +23,15 @@ export interface ButtonProps  extends ClassComponentProps {
     /**
      * Button variant
      */
-    color: 'primary' | 'secondary' | 'error' | 'warning' | 'info' | 'success' | 'inherit' | 'inherit-white';
+    color: ButtonColors;
     /**
      * Button size
      */
-    size: 'small' | 'medium' | 'large';
+    size: Size;
     /**
      * Kind of button
      */
-    variant: 'outlined' | 'contained' | 'text';
-    /**
-     * Disabled state
-     */
-    disabled?: boolean;
+    variant: Variant;
     /**
      * Type of the button
      */
@@ -32,5 +40,8 @@ export interface ButtonProps  extends ClassComponentProps {
      * Loading state
      */
     loading?: boolean;
-
+    /**
+     * State
+     */
+    state: State;
 }

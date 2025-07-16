@@ -1,0 +1,106 @@
+@import "../../styles/index";
+
+$badges-font-size: 12px;
+$badges-font-weight: $font-weight-medium;
+$badges-font-family: $font-family;
+
+.badges {
+  font-size: $badges-font-size;
+  font-weight: $badges-font-weight;
+  font-family: $badges-font-family;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  &--isComponent {
+    .badges__content {
+      position: absolute;
+      
+      z-index: 1;
+
+      &.badges__content--standard {
+        top: -4px;
+        right: -4px;
+      }
+
+      &.badges__content--dot {
+        top: -0.2px;
+        right: -0.2px;
+      }
+    //   min-width: 16px;
+    //   height: 16px;
+    //   padding: 0 4px;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   font-size: 10px;
+    //   line-height: 1;
+    //   border-radius: 999px;
+    //   box-shadow: 0 0 0 2px white;
+    //   pointer-events: none;
+
+    //   &--dot {
+    //     width: 8px;
+    //     height: 8px;
+    //     padding: 0;
+    //     border-radius: 50%;
+    //   }
+    }
+  }
+
+  &__content {
+    &--standard {
+      border-radius: 10px;
+      padding: 2px 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      padding: 2px;
+    }
+
+    &--default {
+      background-color: inherit;
+      color: $color-text-primary;
+    }
+    &--primary {
+      background-color: $color-primary-main;
+      color: $color-primary-contrastText;
+    }
+
+    &--secondary {
+      background-color: $color-secondary-main;
+      color: $color-secondary-contrastText;
+    }
+
+    &--error {
+      background-color: $color-error-main;
+      color: $color-error-contrastText;
+    }
+
+    &--warning {
+      background-color: $color-warning-main;
+      color: $color-warning-contrastText;
+    }
+
+    &--info {
+      background-color: $color-info-main;
+      color: $color-info-contrastText;
+    }
+
+    &--success {
+      background-color: $color-success-main;
+      color: $color-success-contrastText;
+    }
+  }
+
+  &--isComponent {
+  }
+}
