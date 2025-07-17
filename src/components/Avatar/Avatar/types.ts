@@ -1,32 +1,26 @@
-export interface AvatarProps {
-    /**
-     * Size of the avatar.
-     */
-    size?: 'xs' | 'sm' | 'md' | 'lg';
+import { ClassComponentProps } from "@/types";
+import React from "react";
 
-    /**
-     * Additional class names for custom styling.
-     */
-    className?: string;
+export enum AvatarSize {
+    Xs = 'xs',
+    Sm = 'sm',
+    Md = 'md',
+    Lg = 'lg'
+}
 
-    /**
-     * Additional styles for custom styling.
-     */
-    style?: React.CSSProperties;
-    /**
-     * Whether the avatar is circular.
-     */
-    type?: 'circular' | 'rounded' | 'square';
-    /**
-     * The source URL of the image for the avatar.
-     */
-    variant? : 'text' | 'icon' | 'image';
-    /**
-     * The content of the avatar, can be text, icon, or image.
-     */
-    content?: React.ReactNode;
-    /**
-     * The status dot.
-     */
+export enum AvatarVariant {
+    Circular = 'circular',
+    Rounded = 'rounded',
+    Square = 'square'
+}
+
+export interface AvatarProps extends ClassComponentProps {
+    size?: AvatarSize;
     badge?: boolean;
+    variant?: AvatarVariant;
+    onClick?: () => void;
+    src?: string;
+    alt?: string;
+    children?: React.ReactNode;
+    color?: string;
 }

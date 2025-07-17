@@ -1,4 +1,100 @@
+@import "../../../styles/index.scss";
+
 $xs-size: 18px;
 $sm-size: 24px;
 $md-size: 32px;
 $lg-size: 40px;
+
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$font-size-md: 16px;
+$font-size-lg: 20px;
+
+.avatar-container {
+    color: white;
+    font-family: $font-family;
+    font-weight: $font-weight-regular;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &--xs {
+        width: $xs-size;
+        height: $xs-size;
+        font-size: $font-size-xs;
+    }
+
+    &--sm {
+        width: $sm-size;
+        height: $sm-size;
+        font-size: $font-size-sm;
+    }
+
+    &--md {
+        width: $md-size;
+        height: $md-size;
+        font-size: $font-size-md;
+    }
+
+    &--lg {
+        width: $lg-size;
+        height: $lg-size;
+        font-size: $font-size-lg;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__badge {
+        position: absolute;
+        bottom: 1px;
+        right: -0.2px;
+
+        &--xs {
+            .badges__content--dot {
+                width: 2px;
+                height: 2px;
+            }
+        }
+
+        &--sm {
+            .badges__content--dot {
+                width: 3px;
+                height: 3px;
+            }
+        }
+
+        &--md {
+            .badges__content--dot {
+                width: 4px;
+                height: 4px;
+            }
+        }
+    }
+
+    &--circular {
+        border-radius: 50%;
+    }
+
+    &--rounded {
+        border-radius: 4px;
+    }
+
+    &--square {
+        border-radius: 0;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+}
