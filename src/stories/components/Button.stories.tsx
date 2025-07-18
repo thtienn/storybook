@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '../../components/Button/Button';
+import { Button, ButtonColors } from '../../components/Button';
+import { Variant, Size, State } from '@/types';
 
 const meta = {
     title: 'Components/Button',
@@ -15,28 +16,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        variant: 'primary',
-        children: 'Button',
-    },
-};
-
-export const Secondary: Story = {
-    args: {
-        variant: 'secondary',
-        children: 'Button',
-    },
-};
-
-export const Large: Story = {
-    args: {
-        size: 'large',
-        children: 'Button',
-    },
-};
-
-export const Small: Story = {
-    args: {
-        size: 'small',
-        children: 'Button',
+        children: 'Primary Button',
+        variant: Variant.Contained,
+        color: ButtonColors.Primary,
+        size: Size.Medium,
+        className: '',
+        style: {},
+        state: State.Enabled
     },
 };

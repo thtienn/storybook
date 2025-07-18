@@ -1,55 +1,35 @@
 import React from 'react';
-import './Avatar.scss';
-
-export interface AvatarProps {
-    /**
-     * Size of the avatar.
-     */
-    size?: 'xs' | 'sm' | 'md' | 'lg';
-
-    /**
-     * Additional class names for custom styling.
-     */
-    className?: string;
-
-    /**
-     * Additional styles for custom styling.
-     */
-    style?: React.CSSProperties;
-    /**
-     * Whether the avatar is circular.
-     */
-    type?: 'circular' | 'rounded' | 'square';
-    /**
-     * The source URL of the image for the avatar.
-     */
-    variant? : 'text' | 'icon' | 'image';
-    /**
-     * The content of the avatar, can be text, icon, or image.
-     */
-    content?: React.ReactNode;
-    /**
-     * The status dot.
-     */
-    badge?: boolean;
-}
+import './styles.scss';
+import { AvatarProps, AvatarVariant, AvatarSize } from './types';
+import { BadgesColors, BadgesVariant } from '@/components/Badges';
+import { Badges } from '@/components/Badges';
 
 export const Avatar: React.FC<AvatarProps> = ({
-    size = 'md',
     className = '',
     style = {},
-    type = 'circular',
-    variant = 'text',
-    content,
+    size = AvatarSize.Md,
     badge = false,
-}) => {
-    
+    variant = AvatarVariant.Circular,
+    onClick,
+    src,
+    alt = '',
+    children,
+    color = "rgba(189, 189, 189, 1)"
+}: AvatarProps) => {
+
     return (
-        <div className={`avatar avatar--${size} avatar--${type} avatar--${variant} ${className}`} style={style}>
-            {variant === 'image' && <img src={content as string} alt="Avatar" />}
-            {variant === 'icon' && <span className="icon">{content}</span>}
-            {variant === 'text' && <span className="text">{content}</span>}
-            {badge && <span className="badge"></span>}
+    <div className={`avatar-container avatar-container--${size} avatar-container--${variant} ${className}`} style={{...style, backgroundColor: color}} onClick={onClick}>
+            {
+                src ? <img src={src} alt={alt} className={`avatar-container__image avatar-container__image--${size} avatar-container__image--${variant}`} onClick={onClick} />
+                    : children ? <div className={`avatar-container__content avatar-container__content--${size} avatar-container__content--${variant}`} onClick={onClick}>
+                        {children}
+                    </div>
+                        : <div className={`avatar-container__placeholder avatar-container__placeholder--${size}
+                    avatar-container__placeholder--${variant}`} onClick={onClick}>
+                            ?
+                        </div>
+            }
+            {badge && <Badges color={BadgesColors.Success} variant={BadgesVariant.Dot} className={`avatar-container__badge avatar-container__badge--${size}`} />}
         </div>
-    );
+    )
 }

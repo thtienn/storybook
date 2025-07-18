@@ -1,0 +1,267 @@
+@import "../../styles/colors";
+
+$icon-button-small: 34px;
+$icon-button-medium: 40px;
+$icon-button-large: 48px;
+
+.icon-button {
+  border-radius: 100%;
+  padding: 2px 3px;
+  border: none;
+  background-color: inherit;
+
+  &--primary {
+    svg {
+      fill: $color-primary-main;
+    }
+
+    &:hover,
+    &.icon-button--hovered {
+      background-color: $color-primary-hover;
+    }
+
+    &:active,
+    &.icon-button--selected {
+      background-color: $color-primary-selected;
+    }
+
+    &:focus,
+    &.icon-button--focused {
+      background-color: $color-primary-focus;
+    }
+
+    &:focus-visible {
+      background-color: $color-primary-focusVisible;
+    }
+  }
+
+  &--secondary {
+    svg {
+      fill: $color-secondary-main;
+    }
+
+    &:hover,
+    &.icon-button--hovered {
+      background-color: $color-secondary-hover;
+    }
+
+    &:active,
+    &.icon-button--selected {
+      background-color: $color-secondary-selected;
+    }
+
+    &:focus,
+    &.icon-button--focused {
+      background-color: $color-secondary-focus;
+    }
+
+    &:focus-visible {
+      background-color: $color-secondary-focusVisible;
+    }
+  }
+
+  &--error {
+    svg {
+      fill: $color-error-main;
+    }
+
+    &:hover,
+    &.icon-button--hovered {
+      background-color: $color-error-hover;
+    }
+
+    &:active,
+    &.icon-button--selected {
+      background-color: $color-error-selected;
+    }
+
+    &:focus,
+    &.icon-button--focused {
+      background-color: $color-error-focus;
+    }
+
+    &:focus-visible {
+      background-color: $color-error-focusVisible;
+    }
+  }
+
+  &--warning {
+    svg {
+      fill: $color-warning-main;
+    }
+
+    &:hover,
+    &.icon-button--hovered {
+      background-color: $color-warning-hover;
+    }
+
+    &:active,
+    &.icon-button--selected {
+      background-color: $color-warning-selected;
+    }
+
+    &:focus,
+    &.icon-button--focused {
+      background-color: $color-warning-focus;
+    }
+
+    &:focus-visible {
+      background-color: $color-warning-focusVisible;
+    }
+  }
+
+  &--info {
+    svg {
+      fill: $color-info-main;
+    }
+
+    &:hover,
+    &.icon-button--hovered {
+      background-color: $color-info-hover;
+    }
+
+    &:active,
+    &.icon-button--selected {
+      background-color: $color-info-selected;
+    }
+
+    &:focus,
+    &.icon-button--focused {
+      background-color: $color-info-focus;
+    }
+
+    &:focus-visible {
+      background-color: $color-info-focusVisible;
+    }
+  }
+
+  &--success {
+    svg {
+      fill: $color-success-main;
+    }
+
+    &:hover,
+    &.icon-button--hovered {
+      background-color: $color-success-hover;
+    }
+
+    &:active,
+    &.icon-button--selected {
+      background-color: $color-success-selected;
+    }
+
+    &:focus,
+    &.icon-button--focused {
+      background-color: $color-success-focus;
+    }
+
+    &:focus-visible {
+      background-color: $color-success-focusVisible;
+    }
+  }
+
+  &--default {
+    svg {
+      fill: $color-default-main;
+    }
+
+    &:hover,
+    &.icon-button--hovered {
+      background-color: $color-default-hover;
+    }
+
+    &:active,
+    &.icon-button--selected {
+      background-color: $color-default-selected;
+    }
+
+    &:focus,
+    &.icon-button--focused {
+      background-color: $color-default-focus;
+    }
+
+    &:focus-visible {
+      background-color: $color-default-focusVisible;
+    }
+  }
+
+  &--inherit {
+    svg {
+      fill: $color-inherit-main;
+    }
+
+    &:hover,
+    &.icon-button--hovered {
+      background-color: $color-inherit-hover;
+    }
+
+    &:active,
+    &.icon-button--selected {
+      background-color: $color-inherit-selected;
+    }
+
+    &:focus,
+    &.icon-button--focused {
+      background-color: $color-inherit-focus;
+    }
+
+    &:focus-visible {
+      background-color: $color-inherit-focusVisible;
+    }
+  }
+
+  &--inherit-white {
+    svg {
+      fill: $color-inherit-white-main;
+    }
+
+    &:hover,
+    &.icon-button--hovered {
+      background-color: $color-inherit-white-hover;
+    }
+
+    &:active,
+    &.icon-button--selected {
+      background-color: $color-inherit-white-selected;
+    }
+
+    &:focus,
+    &.icon-button--focused {
+      background-color: $color-inherit-white-focus;
+    }
+
+    &:focus-visible {
+      background-color: $color-inherit-white-focusVisible;
+    }
+  }
+
+  &:disabled,
+  &--disabled {
+    svg {
+        fill: $color-disabled;
+        cursor: not-allowed;
+        background-color: inherit;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        background-color: inherit;
+    }
+  }
+
+  &--small {
+    width: $icon-button-small;
+    height: $icon-button-small;
+  }
+
+  &--medium {
+    width: $icon-button-medium;
+    height: $icon-button-medium;
+  }
+
+  &--large {
+    width: $icon-button-large;
+    height: $icon-button-large;
+  }
+}

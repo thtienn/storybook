@@ -1,0 +1,37 @@
+@import "../../styles/colors";
+
+.radio {
+  &--default {
+    accent-color: $color-default-main;
+  }
+
+  &--primary {
+    accent-color: $color-primary-main;
+  }
+
+  &--secondary {
+    accent-color: $color-secondary-main;
+  }
+
+  &--error {
+    accent-color: $color-error-main;
+  }
+
+  &--warning {
+    accent-color: $color-warning-main;
+  }
+
+  &--info {
+    accent-color: $color-info-main;
+  }
+
+  &--success {
+    accent-color: $color-success-main;
+  }
+}
+
+// input[type=radio] {
+//   .radio--default {
+//     accent-color: $color-default-main;
+//   }
+// }
